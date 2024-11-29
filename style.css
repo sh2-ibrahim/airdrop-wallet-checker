@@ -1,0 +1,185 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: url('img/bg.PNG') no-repeat center fixed;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* Snow Animation */
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -600px; /* Matches grid size */
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1; /* Ensures it stays behind content */
+  content: "";
+
+  /* Increase snowflake density by adding more radial gradients */
+  background-image: 
+      radial-gradient(20px 20px at 50px 50px, rgba(255,255,255,0.8) 50%, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 100px 200px, rgba(255,255,255,0.6) 50%, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 300px 300px, rgba(255,255,255,0.7) 50%, rgba(0,0,0,0)),
+      radial-gradient(3px 3px at 400px 50px, rgba(255,255,255,0.5) 50%, rgba(0,0,0,0)),
+      radial-gradient(3px 3px at 200px 500px, rgba(255,255,255,0.4) 50%, rgba(0,0,0,0)),
+      radial-gradient(10px 10px at 150px 300px, rgba(255,255,255,0.6) 50%, rgba(0,0,0,0)),
+      radial-gradient(10px 10px at 350px 50px, rgba(255,255,255,0.5) 50%, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 450px 250px, rgba(255,255,255,0.7) 50%, rgba(0,0,0,0));
+      
+  background-size: 600px 600px; /* Matches grid size */
+  animation: snow 3s linear infinite;
+}
+
+
+.snow:after {
+  margin-left: -200px;
+  opacity: 0.4;
+  animation-duration: 6s;
+  animation-direction: reverse;
+  filter: blur(3px);
+}
+
+.snow:before {
+  margin-left: -300px;
+  opacity: 0.65;
+  animation-duration: 9s;
+  animation-direction: reverse;
+  filter: blur(1.5px);
+}
+
+@keyframes snow {
+  to {
+      transform: translateY(600px); 
+  }
+}
+
+/* Container */
+.container {
+  text-align: center;
+  padding: 20px 20px;
+  position: relative; 
+  z-index: 1;
+}
+
+/* Header Styles */
+header img {
+  width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 100px;
+}
+
+header h1 {
+  margin: 20px 0 10px;
+  font-size: 24px;
+}
+
+header p {
+  font-size: 16px;
+}
+
+/* Form Styles */
+.checker {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.checker h2 {
+  color: #004aad;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.input-group {
+  display: flex;
+  border: 2px solid #004aad;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.input-group input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Eligibility Message */
+.message {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #ff4500; 
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  display: none; 
+}
+
+.input-group button {
+  background: #004aad;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: #004aad;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #00367a;
+}
+
+/* Social Links Section */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between icons */
+  margin-bottom: 20px; /* Space above footer */
+}
+
+.social-icon {
+  padding-top: 20px;
+  font-size: 30px; /* Adjust size of icons */
+  color: #fff; /* White color for icons */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icon:hover {
+  transform: scale(1.2); /* Enlarge icon on hover */
+  color: #004aad; /* Change to your primary color on hover */
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+footer p{
+  font-size: 8px;
+  color: #ff4500;
+}

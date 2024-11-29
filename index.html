@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xmas Eligibility Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="snow"></div> <!-- Snow animation -->
+    <div class="container">
+        <header>
+            <img src="img/logo.png" alt="Xmas logo">
+            <h1>$XMAS Eligibility Checker</h1>
+            <p>Paste your Solana wallet address in the form below 
+                to check if you are eligible for the $XMAS airdrop!
+            </p>
+        </header>
+        <div class="checker">
+            <h2>Check your wallet</h2>
+            <form id="walletForm">
+                <div class="input-group">
+                    <input type="text" id="walletAddress" placeholder="Enter your Solana wallet address" required>
+                    <button type="submit">
+                        <span class="icon">&#128269;</span>
+                    </button> 
+                </div>
+                <p id="eligibilityMessage" class="message"></p>
+                <button type="submit" class="submit-btn">Check Eligibility</button>
+            </form>
+        </div>
+    </div>
+    <div class="social-links">
+        <a href="https://discord.com/" target="_blank" class="social-icon">
+            <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://telegram.org/" target="_blank" class="social-icon">
+            <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" class="social-icon">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+    </div>
+    <footer>
+        <p>XMAS COPYRIGHT 2024. ALL RIGHTS RESERVED</p>
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>
